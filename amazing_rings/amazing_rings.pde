@@ -15,6 +15,15 @@ void draw(){
 
 ellipse(x,500,i,i);  
 i-=10;
+
+  background(#D6D6D4);
+  for(int j=0; j<100; j++){
+    
+    
+  if(i>9){
+
+ellipse(x,500,i,i);  
+i+=10;
 }
 
 
@@ -39,13 +48,4 @@ i-=10;
 x++;
 i=500;
 
-}
-
-
-
-
-
-
-
-
-
+  }}}
