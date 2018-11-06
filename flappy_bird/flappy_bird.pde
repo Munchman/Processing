@@ -1,5 +1,6 @@
 int bx=100;
 int by=500;
+int radius=25;
 int pipey=0;
 int pipex=500;
 int pipey2=600;
@@ -11,7 +12,7 @@ int score=0;
 boolean gameover=false;
 void setup(){
   size(2000,1000);
-  
+  textSize(60);
 }
 
 void draw(){
@@ -61,16 +62,35 @@ if(pipex2 ==0){
 }
 if (bx==pipex&&bx==pipex2&&!intersectsPipes()){
 score++;
-textSize(20);
-  text(score,50,50);
-   fill(0,0,0);
+
+  
+   
+  
 }
 
+   fill(0,0,0);
+   text(score,50,50);
+//if(bx==pipex){
+  //score++;
+
+//}
+  //fill(0,0,0);
+  //text(score,200,50);
+ 
+
 } }
+//boolean intersectsPipes() { 
+     //if (by < upperPipeHeight && bx > pipex && bx < (pipex+pipew)){
+         // return true; }
+    // else if (by<lowerPipeHeight && bx > pipex2 && bx < (pipex2+pipew)) {
+       //   return true; }
+     //else { return false; }
+//}
 boolean intersectsPipes() { 
      if (by < upperPipeHeight && bx > pipex && bx < (pipex+pipew)){
           return true; }
-     else if (by>lowerPipeHeight && bx > pipex && bx < (pipex+pipew)) {
-          return true; }
-     else { return false; }
+     else if(by<lowerPipeHeight&&bx + 50 == pipex+pipew&&bx-50==pipex){
+       return true;
+     }
+     return false;
 }
