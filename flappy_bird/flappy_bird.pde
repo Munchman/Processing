@@ -60,7 +60,7 @@ if(pipex2 ==0){
   fill(241,231,142);
   rect(pipex--,pipey,pipew,upperPipeHeight);
 }
-if (bx==pipex&&bx==pipex2&&!intersectsPipes()){
+if (bx==pipex&&!intersectsPipes()){
 score++;
 
   
@@ -89,7 +89,7 @@ score++;
 boolean intersectsPipes() { 
      if (by < upperPipeHeight && bx > pipex && bx < (pipex+pipew)){
           return true; }
-     else if(by<lowerPipeHeight&&bx + 50 == pipex+pipew&&bx-50==pipex){
+     else if(by>pipey2&&bx > pipex && bx < (pipex+pipew)){
        return true;
      }
      return false;
